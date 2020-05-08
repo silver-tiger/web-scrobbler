@@ -177,6 +177,9 @@ module.exports = (grunt) => {
 				fix: !isCi,
 			},
 		},
+		htmlvalidate: {
+			src: HTML_FILES,
+		},
 		jsonlint: {
 			src: JSON_FILES,
 		},
@@ -219,6 +222,7 @@ module.exports = (grunt) => {
 
 	require('jit-grunt')(grunt, {
 		mochacli: 'grunt-mocha-cli',
+		htmlvalidate: 'grunt-html-validate',
 	});
 	grunt.loadTasks('.grunt');
 
@@ -306,7 +310,7 @@ module.exports = (grunt) => {
 	 * Lint source code using linters specified below.
 	 */
 	grunt.registerTask('lint', [
-		'eslint', 'jsonlint', 'lintspaces',
+		'eslint', 'jsonlint', 'lintspaces', 'htmlvalidate',
 		'stylelint', 'remark', 'unused_files',
 	]);
 
