@@ -125,7 +125,7 @@ define((require) => {
 	 */
 	async function isAllowed() {
 		/* @ifndef DEBUG
-		return !(await Options.getOption(Options.DISABLE_GA));
+		return !Options.getOption(Options.DISABLE_GA);
 		/* @endif */
 		/* @ifdef DEBUG */
 		return false;
