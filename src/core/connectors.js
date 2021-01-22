@@ -1722,6 +1722,13 @@ const connectors = [{
 	],
 	js: 'connectors/nicovideo.js',
 	id: 'nicovideo',
+}, {
+	label: 'Koshkamoroshka',
+	matches: [
+		'*://koshkamoroshka.com/*',
+	],
+	js: 'connectors/koshkamoroshka.js',
+	id: 'koshkamoroshka',
 }];
 
 define(() => connectors);
